@@ -26,5 +26,5 @@ jobs:
         run: echo "${{ inputs.full-name }}"
 
       - name: Showing age
-        if: age > 0
+        if: inputs.age > 0
         run: echo "Your age is ${{ inputs.age }}"
