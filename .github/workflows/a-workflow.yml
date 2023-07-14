@@ -11,7 +11,7 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
       cancel-in-progress: true
     # uses: org/repo/.github/workflows/say-hello.yml@main
-    uses: ./github/workflows/say-hello.yml@v1.0.0
+    uses: ./.github/workflows/say-hello.yml@v1.0.0
     with:
       first-name: "Vincent"
       last-name: "Verweij"
@@ -23,7 +23,7 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
       cancel-in-progress: true
     # uses: org/repo/.github/workflows/say-hello.yml@main
-    uses: ./github/workflows/say-hello.yml@v1.1.0
+    uses: ./.github/workflows/say-hello.yml@v1.1.0
     with:
       first-name: "Vincent"
       last-name: "Verweij"
@@ -36,7 +36,7 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
       cancel-in-progress: true
     # uses: org/repo/.github/workflows/say-hello.yml@main
-    uses: ./github/workflows/say-hello.yml@v1
+    uses: ./.github/workflows/say-hello.yml@v1
     with:
       first-name: "Vincent"
       last-name: "Verweij"
@@ -50,7 +50,7 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
       cancel-in-progress: true
     # uses: org/repo/.github/workflows/say-hello.yml@main
-    uses: ./github/workflows/say-hello.yml@v2
+    uses: ./.github/workflows/say-hello.yml@v2
     with:
       full-name: "Vincent Verweij"
       age: 33
