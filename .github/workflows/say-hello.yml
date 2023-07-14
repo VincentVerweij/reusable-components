@@ -11,6 +11,11 @@ on:
         type: string
         description: "The last name that is used to say hello to."
         required: true
+      age:
+        type: number
+        description: "Your age that will be included in the greeting."
+        required: false
+        default: 0
 
 jobs:
   saying-hello:
@@ -23,3 +28,7 @@ jobs:
 
       - name: Echoing
         run: echo "${{ inputs.first-name }} ${{ inputs.last-name }}"
+
+      - name: Showing age
+        if: age > 0
+        run: echo "Your age is ${{ inputs.age }}"
