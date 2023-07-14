@@ -3,13 +3,9 @@ name: Greeting someone
 on:
   workflow_call:
     inputs:
-      first-name:
+      full-name:
         type: string
-        description: "The first name that is used to say hello to."
-        required: true
-      last-name:
-        type: string
-        description: "The last name that is used to say hello to."
+        description: "The full name that is used to say hello to."
         required: true
       age:
         type: number
@@ -27,7 +23,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Echoing
-        run: echo "${{ inputs.first-name }} ${{ inputs.last-name }}"
+        run: echo "${{ inputs.full-name }}"
 
       - name: Showing age
         if: age > 0
