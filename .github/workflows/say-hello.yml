@@ -1,0 +1,25 @@
+name: Greeting someone
+
+on:
+  workflow_call:
+    inputs:
+      first-name:
+        type: string
+        description: "The first name that is used to say hello to."
+        required: true
+      last-name:
+        type: string
+        description: "The last name that is used to say hello to."
+        required: true
+
+jobs:
+  saying-hello:
+    name: Saying hello
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Echoing
+        run: echo "${{ inputs.first-name }} ${{ inputs.last-name }}"
